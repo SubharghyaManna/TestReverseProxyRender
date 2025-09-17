@@ -1,0 +1,9 @@
+:80 {
+    handle_path /quiz/* {
+        reverse_proxy localhost:8081
+    }
+
+    handle {
+        reverse_proxy localhost:8080
+    }
+}
