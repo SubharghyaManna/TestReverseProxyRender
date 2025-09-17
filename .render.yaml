@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: TestReverseProxyRender
+    env: docker
+    plan: free
+    dockerContext: .
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    envVars:
+      - key: PORT
+        value: 80
